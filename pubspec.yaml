@@ -16,9 +16,9 @@ dependencies:
     git:
       url: https://github.com/manga-easy/manga_easy_client_driver.git
       ref: v1.1.2
-  manga_easy_persistent_database_service:
+  persistent_database:
     git:
-      url: https://github.com/manga-easy/manga_easy_persistent_database_service.git
+      url: https://github.com/manga-easy/lib_persistent_database.git
       ref: v1.2.1
   get_it: ^7.6.0
 
