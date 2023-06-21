@@ -6,7 +6,7 @@ class DataSourceToggleConfigV1 implements DataSourceToggleConfig {
   final String version = 'v1';
   final ClientRequest _driverHttp = GetIt.I();
   final String host = 'https://micro-config.lucas-cm.com.br';
-  final timeout = const Duration(milliseconds: 400);
+  final timeout = const Duration(seconds: 1);
 
   DataSourceToggleConfigV1();
 
