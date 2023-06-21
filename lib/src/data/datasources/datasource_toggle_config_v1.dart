@@ -1,13 +1,14 @@
 import 'package:client_driver/client_driver.dart';
+import 'package:get_it/get_it.dart';
 import 'package:toggle_config/src/data/datasources/datasource_toggle_config.dart';
 
 class DataSourceToggleConfigV1 implements DataSourceToggleConfig {
   final String version = 'v1';
-  final ClientRequest _driverHttp;
+  final ClientRequest _driverHttp = GetIt.I();
   final String host = 'https://micro-config.lucas-cm.com.br';
   final timeout = const Duration(milliseconds: 400);
 
-  DataSourceToggleConfigV1(this._driverHttp);
+  DataSourceToggleConfigV1();
 
   @override
   Future<Map<String, dynamic>> getToggle(String name) async {

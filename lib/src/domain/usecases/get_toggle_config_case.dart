@@ -1,18 +1,17 @@
 import 'package:manga_easy_persistent_database_service/manga_easy_persistent_database_service.dart';
 import 'package:manga_easy_sdk/manga_easy_sdk.dart';
+import 'package:toggle_config/src/data/repositories/toggle_config_repository_v1.dart';
 import 'package:toggle_config/src/domain/entities/toggle_config_cache_entity.dart';
 import 'package:toggle_config/src/domain/repositories/toggle_config_repository.dart';
 
 class GetToggleConfigCase {
-  final ToggleConfigRepository _toggleConfigRepository;
+  final ToggleConfigRepository _toggleConfigRepository =
+      ToggleConfigRepositoryV1();
   final PersistentDatabaseSembastService _sembastService;
   final int _timeCache = 5; //Tempo de de cache em minutos
   final StoreSembast _store = StoreSembast.toggleConfig;
 
-  GetToggleConfigCase(
-    this._toggleConfigRepository,
-    this._sembastService,
-  );
+  GetToggleConfigCase(this._sembastService);
 
   Future<T> call<T>({required ToggleKey key}) async {
     try {
