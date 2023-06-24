@@ -9,7 +9,7 @@ class ToggleConfigCacheEntity {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'toggle': value,
+      'value': value,
       'updateAt': updateAt,
     };
   }
